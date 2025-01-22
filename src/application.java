@@ -48,6 +48,7 @@ public class application {
         plus.setBounds(350,100,20,20);
         panel.add(plus);
 
+        //adds functionality to the button
         calculate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
