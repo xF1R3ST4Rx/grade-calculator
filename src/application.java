@@ -51,7 +51,12 @@ public class application {
         calculate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                String grade = full_grade.getText();
+                String final_exam = finalexam.getText();
+                String grade_percent = full_grade_percent.getText();
+                String final_percent = final_grade_percent.getText();
+                double real_grade = logic.add(Integer.parseInt(grade), Integer.parseInt(final_exam), Double.parseDouble(grade_percent), Double.parseDouble(final_percent));
+                output.setText(String.valueOf(real_grade));
             }
         });
         //makes sure that the frame is visible
