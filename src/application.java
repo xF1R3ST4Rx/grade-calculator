@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -24,6 +25,13 @@ public class application {
         //texts areas for the user input
         JTextArea finalexam = new JTextArea("final grade");
         finalexam.setBounds(400,100,100,25);
+        finalexam.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                finalexam.setText("");
+            }
+        });
         panel.add(finalexam);
 
         JTextArea final_grade_percent = new JTextArea("grade in class percentage");
