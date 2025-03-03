@@ -37,15 +37,35 @@ public class application {
         JTextArea final_grade_percent = new JTextArea("grade in class percentage");
         final_grade_percent.setBounds(400,50,100,25);
         panel.add(final_grade_percent);
-
+        final_grade_percent.addMouseListener(new MouseAdapter() {
+                                                 @Override
+                                                 public void mouseClicked(MouseEvent e) {
+                                                     super.mouseClicked(e);
+                                                     final_grade_percent.setText("");
+                                                 }
+        });
 
         JTextArea full_grade = new JTextArea("grade in class");
         full_grade.setBounds(200,100,100,25);
         panel.add(full_grade);
+        full_grade.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                full_grade.setText("");
+            }
+        });
 
         JTextArea full_grade_percent = new JTextArea("grade in class percentage");
         full_grade_percent.setBounds(200,50,100,25);
         panel.add(full_grade_percent);
+        full_grade_percent.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                full_grade_percent.setText("");
+            }
+        });
 
         JTextArea output = new JTextArea("output final grade");
         output.setBounds(300,150,100,25);
