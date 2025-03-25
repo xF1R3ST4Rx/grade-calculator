@@ -11,4 +11,24 @@ public class logic {
         double final_grade = (grade_weight * (grade)) + (final_weight * (final_exam));
         return final_grade;
     }
+    public static String getLetter(double grade){
+        if(grade > 100 || grade < 0){
+            return "error";
+        }
+        else if(grade >= 90 && grade <= 100){
+            return "A";
+        }
+        else if(grade >= 80 && grade <= 89){
+            return "B";
+        }
+        else if(grade >= 70 && grade <= 79){
+            return "C";
+        }
+        else if(grade >= 60 && grade <= 69){
+            return "D";
+        }
+        else{
+            return "F";
+        }
+    }
 }

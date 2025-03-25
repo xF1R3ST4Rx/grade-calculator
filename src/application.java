@@ -56,6 +56,12 @@ public class application {
             }
         });
 
+        JTextArea letter_grade = new JTextArea("Letter Grade");
+        letter_grade.setBounds(400,150, 100, 25);
+        panel.add(letter_grade);
+
+
+
         JTextArea full_grade_percent = new JTextArea("grade in class percentage");
         full_grade_percent.setBounds(200,50,100,25);
         panel.add(full_grade_percent);
@@ -68,7 +74,7 @@ public class application {
         });
 
         JTextArea output = new JTextArea("output final grade");
-        output.setBounds(300,150,100,25);
+        output.setBounds(200,150,100,25);
         panel.add(output);
 
         //UI choice that just makes the basic ui look better
@@ -86,6 +92,8 @@ public class application {
                 String final_percent = final_grade_percent.getText();
                 double real_grade = logic.add(Integer.parseInt(grade), Integer.parseInt(final_exam), Double.parseDouble(grade_percent), Double.parseDouble(final_percent));
                 output.setText(String.valueOf(real_grade));
+                letter_grade.setText(logic.getLetter(real_grade));
+
             }
         });
         //makes sure that the frame is visible
