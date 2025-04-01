@@ -34,7 +34,7 @@ public class application {
         });
         panel.add(finalexam);
 
-        JTextArea final_grade_percent = new JTextArea("grade in class percentage");
+        JTextArea final_grade_percent = new JTextArea("final weight");
         final_grade_percent.setBounds(400,50,100,25);
         panel.add(final_grade_percent);
         final_grade_percent.addMouseListener(new MouseAdapter() {
@@ -62,7 +62,7 @@ public class application {
 
 
 
-        JTextArea full_grade_percent = new JTextArea("grade in class percentage");
+        JTextArea full_grade_percent = new JTextArea("class weight");
         full_grade_percent.setBounds(200,50,100,25);
         panel.add(full_grade_percent);
         full_grade_percent.addMouseListener(new MouseAdapter() {
